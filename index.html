@@ -10,10 +10,43 @@
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
-
     <body>
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
+        <!--This below is the code for the main nav bar at the top of the page-->
+    <div class="navbar-fixed">
+  <nav class="transparent z-depth-0">
+    <div class="nav-wrapper">
+      <div class="row">
+        <div class="col s12">
+          <a href="#" data-activates="mobile-demo" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
+          <a href="index.html" class="brand-logo" target="_blank">HTML guide</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="index.html" target="_blank">Home</a></li>  
+            <li><a href="HTML_and_CSS.html" target="_blank">HTML and CSS</a></li>
+            <li><a href="CSS_BoxModel.html" target="_blank">CSS Box Model</a></li>
+            <li><a href="JS features.html" target="_blank">JavaScript Features</a></li>
+            <li><a href="Scripting_Languages.html" target="_blank">Scripting Languages</a></li>
+            <li><a href="Implementing_CSS.html" target="_blank">Implementing CSS</a></li>
+          </ul>
+        </div>
+      </div>
+        
+    <!-- This below is an adition to my website in order to make it easier to use by creating a side nav bar in mobile-->
+      <ul id="mobile-demo" class="side-nav">
+        <li><a href="index.html" target="_blank">Home</a></li>
+        <li><a href="HTML_and_CSS.html" target="_blank">HTML and CSS</a></li>
+        <li><a href="CSS_BoxModel.html" target="_blank">CSS Box Model</a></li>
+        <li><a href="JS features.html" target="_blank">JavaScript Features</a></li>
+        <li><a href="Scripting_Languages.html" target="_blank">Scripting Languages</a></li>
+        <li><a href="Implementing_CSS.html" target="_blank">Implementing CSS</a></li>
+      </ul>
+      <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+<img class="responsive-img" src="assets/HeaderImageV2.jpeg" max-width="100%" hight="auto"/>
+</div>
     </body>
   </html>
