@@ -10053,7 +10053,15 @@ $(document).ready(function(){
   $('.scrollspy').scrollSpy();
   //SIDENAV
   $(".button-collapse").sideNav();
-});
-
-    
+// SIDEBAR
+$(document).ready(function(){
+  $('.button-collapse').sideNav({
+      menuWidth: 300, // Default is 300pixels wide
+      edge: 'left', // Choose where the nav will form on the screen
+      closeOnClick: false, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+      draggable: true // Choose whether you can drag to open on touch screens
+    }
+  );
+  // START OPEN
+  $('.button-collapse').sideNav('show');
 });
