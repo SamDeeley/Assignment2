@@ -10062,8 +10062,7 @@ $(document).ready(function(){
       draggable: true // Choose whether you can drag to open on touch screens
     }
   );
-  // START OPEN
-$('.button-collapse').sideNav('show');
+    
 $('.collapsible').collapsible();
   // Show sideNav
   $('.button-collapse').sideNav('show');
