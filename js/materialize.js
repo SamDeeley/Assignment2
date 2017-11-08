@@ -10062,5 +10062,23 @@ $(document).ready(function(){
       draggable: true // Choose whether you can drag to open on touch screens
     }
   );
+<<<<<<< HEAD
     
 
+=======
+  // START OPEN
+$('.button-collapse').sideNav('show');
+$('.collapsible').collapsible();
+  // Show sideNav
+  $('.button-collapse').sideNav('show');
+  // Hide sideNav
+  $('.button-collapse').sideNav('hide');
+  // Destroy sideNav
+  $('.button-collapse').sideNav('destroy');
+    
+$('.button-collapse').sideNav({
+    menuWidth: 300
+    edge: 'right'
+    closeOnClick: true
+    draggable: true
+>>>>>>> parent of ff38614... 07/11/17
