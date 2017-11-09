@@ -10021,64 +10021,46 @@ if (Vel) {
 })(jQuery);
 
 $(document).ready(function(){
-  // MODAL
-  $('.modal').modal();
-  // DROPDOWNS
-  $(".dropdown-button").dropdown(
-    {
-      belowOrigin: true
-    }
-  );
-  // TABS
-  $('ul.tabs').tabs();
-  // SCROLLSPY
-  $('.scrollspy').scrollSpy();
-  //SIDENAV activateion
-  $(".button-collapse").sideNav();
-  $('.collapsible').collapsible();
-      // Show sideNav
-  $('.button-collapse').sideNav;
-    $(document).ready(function(){
-  // MODAL
-  $('.modal').modal();
-  // DROPDOWNS
-  $(".dropdown-button").dropdown(
-    {
-      belowOrigin: true
-    }
-  );
-  // TABS
-  $('ul.tabs').tabs();
-  // SCROLLSPY
-  $('.scrollspy').scrollSpy();
-  //SIDENAV
-  $(".button-collapse").sideNav();
-// SIDEBAR
-$(document).ready(function(){
-  $('.button-collapse').sideNav({
-      menuWidth: 300, // Default is 300pixels wide
-      edge: 'left', // Choose where the nav will form on the screen
-      closeOnClick: false, // Closes side-nav on <a> clicks, useful for Angular/Meteor
-      draggable: true // Choose whether you can drag to open on touch screens
-    }
-  );
-<<<<<<< HEAD
-    
 
-=======
-  // START OPEN
-$('.button-collapse').sideNav('show');
-$('.collapsible').collapsible();
-  // Show sideNav
-  $('.button-collapse').sideNav('show');
-  // Hide sideNav
-  $('.button-collapse').sideNav('hide');
-  // Destroy sideNav
-  $('.button-collapse').sideNav('destroy');
+});
+$(document).ready(function(){
+  $('.parallax').parallax();
+});
+
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('header').outerHeight();
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
     
-$('.button-collapse').sideNav({
-    menuWidth: 300
-    edge: 'right'
-    closeOnClick: true
-    draggable: true
->>>>>>> parent of ff38614... 07/11/17
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+    
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $('header').removeClass('nav-down').addClass('nav-up');
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('header').removeClass('nav-up').addClass('nav-down');
+        }
+      $(document).ready(function(){
+    $('.scrollspy').scrollSpy();
+  });
+ 
